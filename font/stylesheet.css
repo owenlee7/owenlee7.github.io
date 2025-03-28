@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Synthese';
+    src: url('Synthese-BoldOblique.eot');
+    src: local('Synthese Bold Oblique'), local('Synthese-BoldOblique'),
+        url('Synthese-BoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-BoldOblique.woff2') format('woff2'),
+        url('Synthese-BoldOblique.woff') format('woff'),
+        url('Synthese-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Synthese';
+    src: url('Synthese-Bold.eot');
+    src: local('Synthese Bold'), local('Synthese-Bold'),
+        url('Synthese-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-Bold.woff2') format('woff2'),
+        url('Synthese-Bold.woff') format('woff'),
+        url('Synthese-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synthese Book';
+    src: url('Synthese-Book.eot');
+    src: local('Synthese Book'), local('Synthese-Book'),
+        url('Synthese-Book.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-Book.woff2') format('woff2'),
+        url('Synthese-Book.woff') format('woff'),
+        url('Synthese-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synthese';
+    src: url('Synthese-Regular.eot');
+    src: local('Synthese Regular'), local('Synthese-Regular'),
+        url('Synthese-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-Regular.woff2') format('woff2'),
+        url('Synthese-Regular.woff') format('woff'),
+        url('Synthese-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synthese Book';
+    src: url('Synthese-BookOblique.eot');
+    src: local('Synthese Book Oblique'), local('Synthese-BookOblique'),
+        url('Synthese-BookOblique.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-BookOblique.woff2') format('woff2'),
+        url('Synthese-BookOblique.woff') format('woff'),
+        url('Synthese-BookOblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synthese';
+    src: url('Synthese-LightOblique.eot');
+    src: local('Synthese Light Oblique'), local('Synthese-LightOblique'),
+        url('Synthese-LightOblique.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-LightOblique.woff2') format('woff2'),
+        url('Synthese-LightOblique.woff') format('woff'),
+        url('Synthese-LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Synthese Ultra';
+    src: url('Synthese-UltraOblique.eot');
+    src: local('Synthese Ultra Oblique'), local('Synthese-UltraOblique'),
+        url('Synthese-UltraOblique.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-UltraOblique.woff2') format('woff2'),
+        url('Synthese-UltraOblique.woff') format('woff'),
+        url('Synthese-UltraOblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Synthese Ultra';
+    src: url('Synthese-Ultra.eot');
+    src: local('Synthese Ultra'), local('Synthese-Ultra'),
+        url('Synthese-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-Ultra.woff2') format('woff2'),
+        url('Synthese-Ultra.woff') format('woff'),
+        url('Synthese-Ultra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synthese';
+    src: url('Synthese-Light.eot');
+    src: local('Synthese Light'), local('Synthese-Light'),
+        url('Synthese-Light.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-Light.woff2') format('woff2'),
+        url('Synthese-Light.woff') format('woff'),
+        url('Synthese-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synthese';
+    src: url('Synthese-Oblique.eot');
+    src: local('Synthese Oblique'), local('Synthese-Oblique'),
+        url('Synthese-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Synthese-Oblique.woff2') format('woff2'),
+        url('Synthese-Oblique.woff') format('woff'),
+        url('Synthese-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
