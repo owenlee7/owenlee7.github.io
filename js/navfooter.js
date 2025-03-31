@@ -20,23 +20,39 @@ document.addEventListener("DOMContentLoaded", function () {
             updateFooterLanguage(localStorage.getItem("selectedLanguage") || "en");
         });
 
-    function setupHamburgerMenu() {
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.querySelector(".menu");
-
-        if (!hamburger || !menu) return;
-
-        hamburger.addEventListener("click", function (event) {
-            event.stopPropagation();
-            menu.classList.toggle("show");
-        });
-
-        document.addEventListener("click", function (event) {
-            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-                menu.classList.remove("show");
-            }
-        });
-    }
+        function setupHamburgerMenu() {
+            const hamburger = document.querySelector(".hamburger");
+            const menu = document.querySelector(".menu");
+            let autoCloseTimer; // 타이머 변수를 선언합니다.
+        
+            if (!hamburger || !menu) return;
+        
+            hamburger.addEventListener("click", function (event) {
+                event.stopPropagation();
+                // 메뉴 토글
+                menu.classList.toggle("show");
+        
+                // 기존 타이머가 있다면 제거
+                if (autoCloseTimer) {
+                    clearTimeout(autoCloseTimer);
+                }
+                // 메뉴가 열린 상태라면, 5초 후 자동으로 닫히게 합니다.
+                if (menu.classList.contains("show")) {
+                    autoCloseTimer = setTimeout(() => {
+                        menu.classList.remove("show");
+                    }, 3000);
+                }
+            });
+        
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    menu.classList.remove("show");
+                    if (autoCloseTimer) {
+                        clearTimeout(autoCloseTimer);
+                    }
+                }
+            });
+        }
 
     /**
      * switchLanguage 함수

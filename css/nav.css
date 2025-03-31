@@ -85,15 +85,14 @@
 
 
 @media (max-width: 1024px) {
-
     #nav-container {
         max-width: 1024px; 
         height: 100px;
     }
     .navbar {
-    width: 100%;
-    height: 80px;
-    padding: 20px 40px;
+        width: 100%;
+        height: 80px;
+        padding: 20px 40px;
     }
 
     .hamburger {
@@ -121,11 +120,13 @@
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
     }
 
     .menu.show {
         opacity: 1;
         transform: translateY(0);
+        pointer-events: auto;
     }
 
     .dropdown-content {
