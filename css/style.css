@@ -333,7 +333,7 @@ section {
 #sec02 .sec02_con .content_container .img-container .M_UI {
     position: absolute;
     z-index: 2;
-    transform: translateX(8vw) translateY(8vh); 
+    transform: translateX(8vw) translateY(8vh);
 }
 
 
