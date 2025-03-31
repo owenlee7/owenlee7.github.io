@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
     const path = window.location.pathname;
-    const isIndex = path.includes("index.html") || path.includes("index_ko.html");
+    const isIndex = path === "/" || path.includes("index.html") || path.includes("index_ko.html");
     const isGS1 = path.includes("GS1.html") || path.includes("GS1_ko.html");
     const isDPP = path.includes("DPP.html") || path.includes("DPP_ko.html");
 
