@@ -62,7 +62,7 @@
 @media (max-width: 768px) {
   .bg_video {
     position: fixed;
-    width: 100%;
+    width: 200%;
     height: 100vh;
     top: 50%;
     left: 50%;
@@ -366,10 +366,11 @@
     width: 90%;
   }
   #sec02 .sec02_con .content_container .img-container .M_UI {
+    width: 150px;
     transform: translateX(30vw) translateY(7vh);
   }
   #sec02 .sec02_con .content_container .img-container .M_UI img{
-    max-width: 60%;
+    max-width: 100%;
   }
 }
 
@@ -379,10 +380,11 @@
     width: 90%;
   }
   #sec02 .sec02_con .content_container .img-container .M_UI {
+    width: 120px;
     transform: translateX(30vw) translateY(7vh);
   }
   #sec02 .sec02_con .content_container .img-container .M_UI img{
-    max-width: 50%;
+    max-width: 100%;
   }
 }
 
@@ -409,10 +411,11 @@
     width: 90%;
   }
   #sec02 .sec02_con .content_container .img-container .M_UI {
-    transform: translateX(40vw) translateY(7vh);
+    width: 90px;
+    transform: translateX(30vw) translateY(8vh);
   }
   #sec02 .sec02_con .content_container .img-container .M_UI img {
-    max-width: 45%;
+    max-width: 100%;
   }
   #sec02 .sec02_con .content_container .text-container_02 {
     width: 100%;
