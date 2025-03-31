@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // ✅ 저장된 언어 적용
             const savedLang = localStorage.getItem("selectedLanguage") || "en";
-            switchLanguage(savedLang);
+            switchLanguage(savedLang, false);
         });
 
     // ✅ 푸터 로드 (하나의 파일로 합쳤으므로 언어만 변경)
@@ -38,7 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function switchLanguage(lang) {
+    /**
+     * switchLanguage 함수
+     * @param {string} lang - "en" 또는 "ko"
+     * @param {boolean} redirect - URL 리다이렉션 여부 (초기 로드 시 false로 호출 가능)
+     */
+    function switchLanguage(lang, redirect = true) {
         localStorage.setItem("selectedLanguage", lang);
 
         const langEn = document.getElementById("lang-en");
@@ -55,8 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
             langKo.classList.add("active");
             langEn.classList.remove("active");
 
-            if (!window.location.pathname.includes("_ko.html")) {
-                window.location.href = window.location.pathname.replace(".html", "_ko.html");
+            if (redirect) {
+                // 루트나 영어 index일 경우 명시적으로 Korean index로 이동
+                if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+                    window.location.href = "/index_ko.html";
+                } 
+                // 현재 URL에 ".html"이 포함되어 있고, 아직 "_ko.html"이 아닌 경우
+                else if (window.location.pathname.endsWith(".html") && !window.location.pathname.includes("_ko.html")) {
+                    window.location.href = window.location.pathname.replace(".html", "_ko.html");
+                }
             }
         } else {
             navbarBrand.href = "index.html";
@@ -66,11 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
             langEn.classList.add("active");
             langKo.classList.remove("active");
 
-            if (window.location.pathname.includes("_ko.html")) {
-                window.location.href = window.location.pathname.replace("_ko.html", ".html");
+            if (redirect) {
+                // 루트나 한글 index일 경우 명시적으로 English index로 이동
+                if (window.location.pathname === "/" || window.location.pathname === "/index_ko.html") {
+                    window.location.href = "/index.html";
+                } 
+                // 현재 URL이 "_ko.html"을 포함하고 있을 경우
+                else if (window.location.pathname.endsWith(".html") && window.location.pathname.includes("_ko.html")) {
+                    window.location.href = window.location.pathname.replace("_ko.html", ".html");
+                }
             }
         }
-
         // ✅ 푸터 언어 변경 적용
         updateFooterLanguage(lang);
     }
