@@ -62,7 +62,7 @@
 @media (max-width: 768px) {
   .bg_video {
     position: fixed;
-    width: 200%;
+    width: 100%;
     height: 100vh;
     top: 50%;
     left: 50%;
@@ -292,21 +292,20 @@
 @media (max-width: 1024px) {
   #sec02 .sec02_con {
     max-width: 100%;
-    width: 1024px;
+    width: 100%;
   }
   #sec02 .sec02_con .text-container_01 {
     max-width: 100%;
-    width: 1024px;
+    width: 100%;
   }
   #sec02 .sec02_con .content_container {
     align-items: center;
     flex-direction: column;
-    width: 1024x;
+    width: 100%;
     gap: 70px;
   }
   #sec02 .sec02_con .content_container .text-container_02 {
     width: 100%;
-    width: 1024px;
     max-width: 100%;
     text-align: left;
   }
@@ -327,7 +326,7 @@
   #sec02 .sec02_con .content_container {
     align-items: center;
     flex-direction: column;
-    width: 768x;
+    width: 768px;
     gap: 70px;
     padding: 60px 0px 0px 0px;
   }
@@ -371,7 +370,7 @@
   #sec02 .sec02_con .content_container {
     align-items: center;
     flex-direction: column;
-    width: 480x;
+    width: 480px;
     gap: 50px;
   }
   #sec02 .sec02_con .content_container .text-container_02 {
