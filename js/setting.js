@@ -11,23 +11,19 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     ScrollTrigger.scrollerProxy("#container", {
-
         scrollTop(value) {
-
             if (arguments.length) {
                 container.scrollTop = value;
             }
-
             return container.scrollTop;
-
         }
     });
+
     container.addListener(ScrollTrigger.update);
     ScrollTrigger.defaults({ scroller: stage });
 
     container.setPosition(0, 0);
     container.track.xAxis.element.remove();
-
 
     $('.startPoint').click(function () {
         container.scrollTo(0, 0, 600, {
@@ -37,12 +33,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
-
     (function () {
-
-
         let v = 0;
-
         gsap.to(".scroll-content", {
             scrollTrigger: {
                 trigger: ".scroll-content",
@@ -51,44 +43,18 @@ window.addEventListener('DOMContentLoaded', function () {
                 end: () => "+=" + 6000,
                 scrub: true,
                 onUpdate: self => {
-                    // console.log("progress:", self.progress)
-                    // v = Math.floor(self.progress * 5);
-                    // console.log(v)
-
                 }
             }
         });
-
-
-
-
-        /*
-
-
-        */
-
-/*
-
-
-*/
-
-
-
     })();
-
 
     // Only necessary to correct marker position - not needed in production
     if (document.querySelector('.gsap-marker-scroller-start')) {
         const markers = gsap.utils.toArray('[class *= "gsap-marker"]');
-
         container.addListener(({ offset }) => {
             gsap.set(markers, { marginTop: -offset.y })
             $('.posNum').html(offset.y);
         });
     }
 
-
-
 })
-
-
