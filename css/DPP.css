@@ -699,53 +699,53 @@ section {
 
 
 @media (max-width: 1024px) {
-.title1 {
-  font-size: 16px;
-}
-.title2 {
-  font-size: 42px;
-}
-.title3 {
-  font-size: 34px;
-}
-.title4 {
-  font-size: 16px;
-}
-.title5 {
-  font-size: 18px;
-}
+    .title1 {
+    font-size: 16px;
+    }
+    .title2 {
+    font-size: 42px;
+    }
+    .title3 {
+    font-size: 34px;
+    }
+    .title4 {
+    font-size: 16px;
+    }
+    .title5 {
+    font-size: 18px;
+    }
 
-.content1 {
-  font-size: 16px;
-}
-.Content2 {
-  font-size: 16px;
-}
+    .content1 {
+    font-size: 16px;
+    }
+    .Content2 {
+    font-size: 16px;
+    }
 }
 @media (max-width: 768px) {
-  .title1 {
+    .title1 {
     font-size: 14px;
-  }
-  .title2 {
+    }
+    .title2 {
     font-size: 34px;
-  }
-  .title3 {
+    }
+    .title3 {
     font-size: 24px;
-  }
-  .title4 {
+    }
+    .title4 {
     font-size: 14px;
-  }
-  .title5 {
+    }
+    .title5 {
     font-size: 16px;
-  }
-  
-  .content1 {
+    }
+
+    .content1 {
     font-size: 14px;
-  }
-  .Content2 {
+    }
+    .Content2 {
     font-size: 14px;
-  }
-  }
+    }
+}
 
   @media (max-width: 480px) {
     .title1 {
@@ -770,7 +770,7 @@ section {
     .Content2 {
       font-size: 10px;
     }
-    }
+}
 
 
 @media (max-width: 1024px) {
@@ -802,20 +802,71 @@ section {
     }
     
 
-
-
+    #sec02 {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+    }
     #sec02 .sec02_con {
-    width: 1024px;
-    align-items: flex-start;
-    text-align: left;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sec02 .sec02_con .title {
+        max-width: 100%;
+        width: 100%;
+        margin: 40px 0;
+        text-align: left;
+        word-wrap: break-word;
+    }
+    #sec02 .sec02_con .img-container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: left;
+        align-items: left;
+    }
+    #sec02 .sec02_con .set-container01,
+    #sec02 .sec02_con .set-container02,
+    #sec02 .sec02_con .set-container03,
+    #sec02 .sec02_con .set-container04 {
+        width: 100%;
+        max-width: 100%;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    #sec02 .sec02_con .set-container02 img:nth-child(2),
+    #sec02 .sec02_con .set-container03 img:nth-child(2),
+    #sec02 .sec02_con .set-container04 img:nth-child(2) {
+        max-width: 110px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    #sec02 .sec02_con .set-container01 img:nth-child(2){
+        max-width: 160px;
+        height: 110px;
+    }
+    #sec02 .sec02_con .learn_more02 {
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+        width: 100%;
+        max-width: 100%;
+        padding-right: 40px;
+    }
+    #sec02 .sec02_con .learn_more02 img {
+        width: 150px;
     }
 
-    #sec02 .sec02_con .img-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    width: 800px;
-    }
 
 
     #sec03 {
@@ -823,15 +874,21 @@ section {
     }
     #sec03 .sec03_con {
         grid-template-columns: 1fr;
-        gap: 80px;
+        gap: 40px;
+    }
+    #sec03 .sec03_con .set-container01 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
     }
     #sec03 .sec03_con .img-container img {
-        max-width: 85%;
+        max-width: 70%;
         height: auto;
     }
     #sec03 .sec03_con .text-container {
         max-width: 100%;
-        width: 955px;
+        width: 100%;
         margin-left: 0;
         align-items: left;
         text-align: center;
@@ -840,7 +897,7 @@ section {
 
 
     #sec04 {
-        width: 1024px;
+        width: 100%;
         padding: 100px 40px 100px 40px;
     }
     #sec04 .sec04_con .content-container {
@@ -853,6 +910,9 @@ section {
         text-align: left;
     }
 
+
+
+
     #sec05 {
     width: 100%;
     }
@@ -861,7 +921,17 @@ section {
     }
     #sec05 .sec05_con .content-container .set-container01,
     #sec05 .sec05_con .content-container .set-container02 {
-    max-width: 1024px;
+    max-width: 100%;
+    }
+    #sec05 .sec05_con [class^="set-container"] .title5 {
+        margin-bottom: 20px;
+        min-height: 50px;
+    }
+    #sec05 .sec05_con [class^="set-container"] .content1 {
+        min-height: 150px;
+    }
+    #sec05 .sec05_con [class^="set-container"] img {
+        margin-top: 30px;
     }
 }
 
@@ -872,81 +942,88 @@ section {
 
 @media (max-width: 768px) {
 
-    
-    #sec02 {
-    padding: 100px 40px 100px 40px;
+    #sec01 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+        padding: 300px 20px 300px 20px;
     }
-    #sec02 .sec02_con .set-container01,
-    #sec02 .sec02_con .set-container02,
-    #sec02 .sec02_con .set-container03,
-    #sec02 .sec02_con .set-container04 {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start; 
-    flex-direction: column;
-    padding: 10px 5px;
-    min-height: 350px;
-    height: 100%;
-}
+    #sec01 .sec01_con .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        gap: 20px;
+    }
+    #sec01 .sec01_con .title .text-container01 {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+    #sec01 .sec01_con .title .text-container02 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+    }
 
-    #sec02 .sec02_con .set-container01 img:nth-child(2),
+
+
     #sec02 .sec02_con .set-container02 img:nth-child(2),
     #sec02 .sec02_con .set-container03 img:nth-child(2),
     #sec02 .sec02_con .set-container04 img:nth-child(2) {
-    max-width: 90px;
-    min-height: auto;
-    position: relative;
-    z-index: 2;
-    margin: 30px 0 30px 10px;
+      max-width: 90px;
+      height: auto;
+      margin-bottom: 20px;
     }
-    
     #sec02 .sec02_con .set-container01 img:nth-child(2){
-    max-width: 150px;
-    min-height: 100px;
+      max-width: 130px;
+      max-height: 90px;
+      margin-bottom: 20px;
     }
-
-    #sec02 .sec02_con [class^="set-container"] .title5 {
-    margin: 0px 8px;
-    }
-
-    /* 🔹 내용 */
-    #sec02 .sec02_con [class^="set-container"] .content1 {
-    margin: 15px 8px;
-    }
-
 
 
     #sec03 .sec03_con {
         display: flex;
-        flex-direction: column-reverse;
-        gap: 40px;
+        flex-direction: column;
+        gap: 0px;
     }
-    #sec03 .sec03_con .img-container img {
-        margin-top: 50px;
-        max-width: 250%;
-        height: auto;
+    #sec03 .sec03_con .set-container01 {
+        padding: 0;
     }
 
+
     #sec04 {
-        width: 768px;
+        width: 100%;
         padding: 100px 40px 100px 40px;
     }
 
 
     #sec05 {
         width: 100%;
-        height: 80%;
         padding: 200px 40px 200px 40px;
     }
-
-    #sec05 .sec05_con .content-container {
-        width: 100%;
-        max-width: 768px;
-        column-gap: 40px;
+    #sec05 .sec05_con .title-container {
+        margin-bottom: 50px;
     }
-
+    #sec05 .sec05_con .content-container {
+        gap: 20px;
+    }
+    #sec05 .sec05_con .content-container .set-container01,
+    #sec05 .sec05_con .content-container .set-container02 {
+        padding: 0;
+    }
+    #sec05 .sec05_con [class^="set-container"] .title5 {
+        margin-bottom: 20px;
+        min-height: 70px;
+    }
+    #sec05 .sec05_con [class^="set-container"] .content1 {
+        min-height: 190px;
+    }
     #sec05 .sec05_con [class^="set-container"] img {
         margin-top: 30px;
     }
@@ -965,100 +1042,58 @@ section {
         opacity: 0.2;
     }
 
-    #sec01 {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: auto;
-        padding: 300px 20px 300px 20px;
-    }
-
-    #sec01 .sec01_con .title {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        width: 100%;
-        height: 500px;
-        gap: 10px;
-    }
-    #sec01 .sec01_con .text-container01 {
-        width: 100%;
-        max-width: 100%;
-        text-align: left;
-    }
-
-    #sec01 .sec01_con .title .text-container02 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        width: 100%;
-        max-width: 100%;
-    }
-
     #sec02  {
+        width: 100%;
+        max-width: 100%;
         padding: 60px 20px 60px 20px;
     }
     #sec02 .sec02_con .img-container {
-        gap: 20px;
+        gap: 15px;
     }
     #sec02 .sec02_con .set-container01,
     #sec02 .sec02_con .set-container02,
     #sec02 .sec02_con .set-container03,
     #sec02 .sec02_con .set-container04 {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 10px 5px;
-    min-height: 250px;
-    height: 100%;
-}
-
+        width: 100%;
+        max-width: 100%;
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
     #sec02 .sec02_con .set-container01 img:nth-child(2),
     #sec02 .sec02_con .set-container02 img:nth-child(2),
     #sec02 .sec02_con .set-container03 img:nth-child(2),
     #sec02 .sec02_con .set-container04 img:nth-child(2) {
         max-width: 70px;
-        margin: 30px 0 30px 10px;
+        margin: 20px 0 20px 0px;
     }
-    
     #sec02 .sec02_con .set-container01 img:nth-child(2){
-    max-width: 110px;
-    min-height: 80px;
+        max-width: 100px;
+        max-height: 70px;
+        margin: 20px 0 20px 0px;
     }
-
     #sec02 .sec02_con [class^="set-container"] .title5 {
-    margin: 0px 8px;
-
+        margin: 0px 8px;
     }
-
     #sec02 .sec02_con [class^="set-container"] .content1 {
         font-size: 10px;
     }
 
 
 
-
-
-    #sec03  {
+    #sec03 {
+        width: 100%;
+        max-width: 100%;
         padding: 60px 20px 60px 20px;
     }
-    #sec03 .sec03_con {
-        display: flex;
-        gap: 40px;
-    }
-    #sec03 .sec03_con .img-container img {
-        margin-top: 50px;
-        max-width: 230%;
-        height: auto;
-    }
+
 
 
     #sec04 {
-        width: 480px;
+        width: 100%;
+        max-width: 100%;
         padding: 100px 40px 100px 40px;
     }
     #sec04 .sec04_con .content-container {
@@ -1069,8 +1104,12 @@ section {
         height: auto;
     }
 
+
+
+
     #sec05 {
         width: 100%;
+        max-width: 100%;
         height: auto;
         min-height: unset;
         padding: 100px 20px 100px 20px;
@@ -1081,11 +1120,14 @@ section {
     }
     #sec05 .sec05_con {
         width: 100%;
-        max-width: 480px;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+    #sec05 .sec05_con .title-container {
+        margin-bottom: 20px;
     }
     #sec05 .sec05_con .content-container {
         display: flex;
@@ -1094,20 +1136,19 @@ section {
         gap: 30px;
         width: 100%;
     }
-    #sec05 .sec05_con .title-container {
-        margin-bottom: 10px;
+    #sec05 .sec05_con .content-container .set-container01,
+    #sec05 .sec05_con .content-container .set-container02 {
+        padding: 0;
     }
-
     #sec05 .sec05_con [class^="set-container"] .title5 {
-        margin-bottom: 20px;
-    }
-    
-    #sec05 .sec05_con [class^="set-container"] .content1 {
         margin-bottom: 10px;
+        min-height: 30px;
+    }
+    #sec05 .sec05_con [class^="set-container"] .content1 {
+        min-height: 70px;
     }
     #sec05 .sec05_con [class^="set-container"] img {
-        margin-top: 10px;
-        width: 80%;
+        margin-top: 20px;
     }
 }
 

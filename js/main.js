@@ -155,10 +155,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    if (isDPP && window.innerWidth <= 480) {
-        console.log("❌ DPP 페이지(480px 이하)에서 애니메이션 실행 안 함!");
-        return; // 📌 DPP 페이지에서만 실행 차단
-    }
+    // if (isDPP && window.innerWidth <= 480) {
+    //     console.log("❌ DPP 페이지(480px 이하)에서 애니메이션 실행 안 함!");
+    //     return; // 📌 DPP 페이지에서만 실행 차단
+    // }
     if (isDPP) {
         console.log("✅ DPP 페이지에서 실행");
 
