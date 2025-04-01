@@ -41,7 +41,7 @@ footer {
 
 .footer-content {
     max-width: 100%;
-    width: 1440px;
+    width: 100%;
     height: 350px;
     display: flex;
     flex-direction: column; 
@@ -55,7 +55,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
-    width: 1440px;
+    width: 100%;
 }
 
 .footer-content .main .logo img {
