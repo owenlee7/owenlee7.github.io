@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
     
 
     if (isIndex) {
-        console.log("✅ Index 페이지에서 실행");
+        // console.log("✅ Index 페이지에서 실행");
 
         gsap.set("#sec02 .W_UI img, #sec02 .M_UI img", { opacity: 0, y: 200 });
 
@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isGS1) {
-        console.log("✅ GS1 페이지에서 실행");
+        // console.log("✅ GS1 페이지에서 실행");
 
         gsap.set("#sec03 .column-left, #sec03 .column-right", { opacity: 0, y: 100 });
 
@@ -160,7 +160,7 @@ window.addEventListener("DOMContentLoaded", function () {
     //     return; // 📌 DPP 페이지에서만 실행 차단
     // }
     if (isDPP) {
-        console.log("✅ DPP 페이지에서 실행");
+        // console.log("✅ DPP 페이지에서 실행");
 
         gsap.set("#sec02 .img-container", { opacity: 0, x: 100 });
 
@@ -230,9 +230,9 @@ window.addEventListener("DOMContentLoaded", function () {
         const sec04_titles = document.querySelectorAll("#sec04 .content-container .title4");
 
         if (!sec04_titles.length) {
-            console.error("❌ sec04 내 title4 요소를 찾을 수 없음!");
+            // console.error("❌ sec04 내 title4 요소를 찾을 수 없음!");
         } else {
-            console.log("✅ #sec04 title4 애니메이션 실행!");
+            // console.log("✅ #sec04 title4 애니메이션 실행!");
 
             gsap.set(sec04_titles, { opacity: 0, x: -50 });
 
