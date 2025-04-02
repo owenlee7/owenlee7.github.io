@@ -20,18 +20,72 @@ document.addEventListener("DOMContentLoaded", function () {
             updateFooterLanguage(localStorage.getItem("selectedLanguage") || "en");
         });
 
+    // ✅ Contact Us 팝업 HTML 로드 및 이벤트 설정
+    fetch("contactus.html")
+        .then(response => response.text())
+        .then(data => {
+            // 팝업 HTML을 body의 맨 끝에 삽입
+            document.body.insertAdjacentHTML("beforeend", data);
+
+            // 팝업 관련 요소 가져오기 (ID contactModal는 그대로 사용)
+            var contactus = document.getElementById("contactModal");
+            var contactBtn = document.getElementById("contactBtn");
+            var closeBtn = document.querySelector("#contactModal .close");
+
+            // 팝업 열기 및 닫기 함수 (스크롤 방지 기능 제거)
+            function openModal() {
+                contactus.style.display = "block";
+            }
+
+            function closeModal() {
+                contactus.style.display = "none";
+            }
+
+            // Contact Us 버튼 클릭 시 모달 열기
+            if (contactBtn) {
+                contactBtn.addEventListener("click", function (event) {
+                    event.preventDefault(); // 기본 앵커 동작 방지
+                    openModal();
+                });
+            }
+
+            // 닫기 버튼 클릭 시 모달 닫기
+            if (closeBtn) {
+                closeBtn.addEventListener("click", function () {
+                    closeModal();
+                });
+            }
+
+            // 모달 영역 밖 클릭 시 모달 닫기
+            window.addEventListener("click", function (event) {
+                if (event.target === contactus) {
+                    closeModal();
+                }
+            });
+
+            // 폼 제출 처리 (데모용: 제출 후 알림 표시)
+            var contactForm = document.getElementById("contactForm");
+            if (contactForm) {
+                contactForm.addEventListener("submit", function (event) {
+                    alert("Thank you for contacting us!");
+                    closeModal();
+                });
+            }
+        });
+
+
     function setupHamburgerMenu() {
         const hamburger = document.querySelector(".hamburger");
         const menu = document.querySelector(".menu");
         let autoCloseTimer; // 타이머 변수를 선언합니다.
-    
+
         if (!hamburger || !menu) return;
-    
+
         hamburger.addEventListener("click", function (event) {
             event.stopPropagation();
             // 메뉴 토글
             menu.classList.toggle("show");
-    
+
             // 기존 타이머가 있다면 제거
             if (autoCloseTimer) {
                 clearTimeout(autoCloseTimer);
@@ -43,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }, 3000);
             }
         });
-    
+
         document.addEventListener("click", function (event) {
             if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
                 menu.classList.remove("show");
@@ -80,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 루트나 영어 index일 경우 명시적으로 Korean index로 이동
                 if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
                     window.location.href = "/index_ko.html";
-                } 
+                }
                 // 현재 URL에 ".html"이 포함되어 있고, 아직 "_ko.html"이 아닌 경우
                 else if (window.location.pathname.endsWith(".html") && !window.location.pathname.includes("_ko.html")) {
                     window.location.href = window.location.pathname.replace(".html", "_ko.html");
@@ -98,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 루트나 한글 index일 경우 명시적으로 English index로 이동
                 if (window.location.pathname === "/" || window.location.pathname === "/index_ko.html") {
                     window.location.href = "/index.html";
-                } 
+                }
                 // 현재 URL이 "_ko.html"을 포함하고 있을 경우
                 else if (window.location.pathname.endsWith(".html") && window.location.pathname.includes("_ko.html")) {
                     window.location.href = window.location.pathname.replace("_ko.html", ".html");

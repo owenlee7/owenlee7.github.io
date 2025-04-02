@@ -1,0 +1,34 @@
+<!-- contactus.html -->
+<div id="contactModal" class="contactus">
+    <div class="contactus-content">
+        <span class="close">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contactForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScVTpgBZHtRfPK_8bHinnBoxu3nsPwOdQo5T0nr5Et01BRYUg/formResponse"
+            target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form-floating">
+                <label for="form-Name">Name *</label>
+                <input type="text" name="entry.756400847" id="form-Name" required/>
+            </div>
+
+            <div class="form-floating">
+                <label for="form-Mobile">Mobile</label>
+                <input type="text" name="entry.1364814337" id="form-Mobile"/>
+            </div>
+
+            <div class="form-floating">
+                <label for="form-Email">Email *</label>
+                <input type="email" name="entry.1936795622" id="form-Email" required/>
+            </div>
+
+            <div class="form-floating">
+                <label for="form-Message">Message *</label>
+                <textarea name="entry.1412969779" id="form-Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+        <!-- Hidden iframe: 구글폼의 응답 처리 결과를 팝업으로 뜨지 않게 하기 위해 사용 -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
+    </div>
+</div>
